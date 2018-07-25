@@ -1,119 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>A&A</title>
-    <link rel="stylesheet" href="./assets/css/normalize.css">    
-    <link rel="stylesheet" href="./assets/css/style.css">
+<!doctype html>
+<html lang="es" ng-app="sample-app" ng-controller="AppController">
 
-    
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>INAR</title>
 
-        
-</head>
-<body>
+  <style>
+    [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+      display: none !important;
+    }
+  </style>
 
-        <script src="assets/libs/particles.js"></script>
-        <script>
-window.onload = function() {
-        Particles.init({
-          selector: '.background',
-          color: '#000000',
-          maxParticles: 80,
-          connectParticles: true,
-          responsive: [
-            {
-              breakpoint: 768,
-              options: {
-                maxParticles: 80
-              }
-            }, {
-              breakpoint: 375,
-              options: {
-                maxParticles: 50
-              }
-            }
-          ]
-        });
-      };
+  <link rel="stylesheet" href="vendor/fullpage.js/jquery.fullPage.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 
 
-      function sendMail() {
-    var link = "cyber_donas123@hotmail.com"
-             + "&subject=" + escape("This is my subject")
-             + "&body=" + "XD";
-    ;
+  <!-- <select id="demosMenu" ng-model="$root.chosenPage" ng-change="$root.changePage()">
+    <option value="" selected disabled>Choose Demo</option>
+    <option value="main">Main Page</option>
+    <option value="dynamic">Dynamic Options</option>
+  </select> -->
 
-    window.location.href = link;
-}
 
-        </script>
 
-    <header>
-        <i></i>
-        <nav>
-            <ul>
-                <li>Nosotros</li>
-                <li>Servicios</li>
-                <li>Contacto</li>              
-            </ul>
-        </nav>
-    </header>
+  <main ui-view></main>
 
-    <canvas class="background"></canvas>
-    <div class="parallax bg1"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="vendor/fullpage.js/vendors/jquery.slimscroll.min.js"></script>
+  <script src="vendor/fullpage.js/jquery.fullPage.min.js"></script>
 
-    <div class="grid-container content-cards">
-            <div class="grid-item">
-                    <img class="img-card" src="assets/img/recamara.jpg" alt="">
-            </div>
-            <div class="grid-item">
-                    <i class="house"></i>
-                    <p>
-                            Ofrecemos servicios de valuación en todo el país
-                            y contamos con experiencia en todo tipo de inmuebles
-                            y activos, abarcando todos los propósitos que requieren
-                            los clientes
-                            <br>
-                            <br>
-                            Avalúos para aprovechar crédito
-                            INFONAVIT o FOVISSSTE
-                            <br>
-                            <br>
-                            Traslado de domino, aseguramiento o juicios
-                    </p>
-            </div>
-            <div class="grid-item">
-                    <img class="img-card" src="assets/img/render.jpg" alt="">
-            </div>
-            <div class="grid-item">
-                    <i class="render"></i>
-                    <p>
-                            Arquitectura, diseño y contrucción:
-                            vivienda comercial,industrial, residencial
-                            <br>
-                            <br>
-                            Mantenimiento integral de inmuebles
-                            Servicios Digitales:
-                            <br>
-                            <br>
-                            Levantamientos, renders, recorridos virtuales
-                    </p>
-            </div>
-    </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.min.js"></script>
+  <script src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="angular-fullPage.js"></script>
 
-    <div class="parallax bg2"></div>
+  <script src="app/app.module.js"></script>
+  <script src="app/app.config.js"></script>
+  <script src="app/app.controller.js"></script>
+  <script src="app/views/main/main.controller.js"></script>
+  <script src="app/views/dynamic/dynamic.controller.js"></script>
 
-    <div class="grid-container-footer">
-        <div class="item1"> Atencion en linea</div>
-        <div class="item21"><input type="text" placeholder="Nombre"></div>
-        <div class="item22"><input type="text" placeholder="E-mail"></div>
-        <div class="item23"><button onclick="sendMail();">Enviar</button></div>
-        <div class="item3">Aviso de privacidad. <br>
-                Avalúos & Arquitectos. Derechos Reservados.</div>        
-    </div>
-            
-    
-</body>
 </html>

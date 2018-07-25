@@ -1,0 +1,354 @@
+<!-- <ul id="menu">
+	<li data-menuanchor="firstPage"><a>First slide</a></li>
+	<li data-menuanchor="secondPage"><a>Second slide</a></li>
+	<li data-menuanchor="3rdPage"><a>Third slide</a></li>
+	<li data-menuanchor="4thpage"><a>Fourth slide</a></li>
+</ul> -->
+
+<header>
+	<div class="wrapper">
+		<div>
+			<img src="assets/img/LOGO_AT&T.png" alt="">
+		</div>
+		<div class="sub-wrapper">
+			<span>
+				<span>International Activation Report </span>
+				<span class="color-disable">INAR v2</span>
+			</span>
+			<span class="align-right"> 
+				<span class="color-disable">Run Date: </span>
+				<span class="color-high">May 27, 2018</span>
+			</span>
+		</div>
+	</div>
+	<ul class="line">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+</header>
+
+<div full-page options="vm.mainOptions">
+  	<div class="section " id="section0">
+		
+		<div class="wrapper-daily">
+			<div class="title-table f-18">
+				<span class="color-blue">Daily report</span> 
+				<span class="color-disable">of </span>
+				<span class="color-high">May 26, 2018</span>
+			</div>
+
+			<span class="wrapper-table">
+					<table class="daily">
+							<thead>
+								<tr>
+									<td>Serv Cat</td>
+									<td class=""><span class="align-left">New Adds</span> <b class=" f-20">+</b></td>
+									<td class=""><span class="align-left">Add-Ons</span> <b class=" f-20">+</b></td>
+									<td class=""><span class="align-left">Reacts</span> <b class=" f-20">=</b></td>
+									<td> <span class="align-left"><b> Gross Adds</b></span> <b class=" f-20">-</b></td>
+									<td class=""><span class="align-left">Deacts</span> <b class=" f-20">+</b></td>
+									<td class=""><span class="align-left">Mig</span> <b class=" f-20">=</b></td>
+									<td> <span class="align-left"><b>Net</b></span> </td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-repeat="row in inar.daily.list">
+									<td>{{row.servCat}}</td>
+									<td class="gray-light">{{row.newAdds}}</td>
+									<td class="gray-light">{{row.addOns}}</td>
+									<td class="gray-light">{{row.reacts}}</td>
+									<td><b class="">{{row.grossAdds}}</b></td>
+									<td class="gray-light">{{row.deacts}}</td>
+									<td class="gray-light">{{row.mig}}</td>
+									<td><b class="">{{row.net}}</td>
+								</tr>
+								<tr>
+									<td class="gray-light"><b>{{inar.daily.total.servCat}}</b></td>
+									<td class="gray-light">{{inar.daily.total.newAdds}}</td>
+									<td class="gray-light">{{inar.daily.total.addOns}}</td>
+									<td class="gray-light">{{inar.daily.total.reacts}}</td>
+									<td><b>{{inar.daily.total.grossAdds}}</b></td>
+									<td class="gray-light">{{inar.daily.total.deacts}}</td>
+									<td class="gray-light">{{inar.daily.total.mig}}</td>
+									<td><b>{{inar.daily.total.net}}</b></td>
+								</tr>
+							</tbody>
+						</table>
+						<br>
+						<br>
+						<table class="daily">
+								<tbody>
+									<tr ng-repeat="row in inar.daily.ext">
+										<td>{{row.servCat}}</td>
+										<td class="gray-light">{{row.newAdds}}</td>
+										<td class="gray-light">{{row.addOns}}</td>
+										<td class="gray-light">{{row.reacts}}</td>
+										<td>{{row.grossAdds}}</td>
+										<td class="gray-light">{{row.deacts}}</td>
+										<td class="gray-light">{{row.mig}}</td>
+										<td><b class="">{{row.net}}</td>
+									</tr>
+								<tbody>
+						</table>
+			</span>
+			<span class="wrapper-info">
+				<table class="daily">
+					<thead>
+						<tr>
+							<td>Serv Cat</td>
+							<td class="color-disable"><span class="align-left">New Adds</span> <b class="color-disable f-20">+</b></td>
+							<td class="color-disable"><span class="align-left">Add-Ons</span> <b class="color-disable f-20">+</b></td>
+							<td class="color-disable"><span class="align-left">Reacts</span> <b class="color-disable f-20">=</b></td>
+							<td> <span class="align-left"><b> Gross Adds</b></span> <b class="color-disable f-20">-</b></td>
+							<td class="color-disable"><span class="align-left">Deacts</span> <b class="color-disable f-20">+</b></td>
+							<td class="color-disable"><span class="align-left">Mig</span> <b class="color-disable f-20">=</b></td>
+							<td> <span class="align-left"><b>Net</b></span> </td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="row in inar.daily.list">
+							<td>{{row.servCat}}</td>
+							<td class="gray-light">{{row.newAdds}}</td>
+							<td class="gray-light">{{row.addOns}}</td>
+							<td class="gray-light">{{row.reacts}}</td>
+							<td><b class="color-medium">{{row.grossAdds}}</b></td>
+							<td class="gray-light">{{row.deacts}}</td>
+							<td class="gray-light">{{row.mig}}</td>
+							<td><b class="color-medium">{{row.net}}</td>
+						</tr>
+						<tr>
+							<td class="gray-light"><b>{{inar.daily.total.servCat}}</b></td>
+							<td class="gray-light">{{inar.daily.total.newAdds}}</td>
+							<td class="gray-light">{{inar.daily.total.addOns}}</td>
+							<td class="gray-light">{{inar.daily.total.reacts}}</td>
+							<td><b>{{inar.daily.total.grossAdds}}</b></td>
+							<td class="gray-light">{{inar.daily.total.deacts}}</td>
+							<td class="gray-light">{{inar.daily.total.mig}}</td>
+							<td><b>{{inar.daily.total.net}}</b></td>
+						</tr>
+					</tbody>
+				</table>
+				<br>
+				<br>
+				<table class="daily">
+						<tbody>
+							<tr ng-repeat="row in inar.daily.ext">
+								<td>{{row.servCat}}</td>
+								<td class="gray-light">{{row.newAdds}}</td>
+								<td class="gray-light">{{row.addOns}}</td>
+								<td class="gray-light">{{row.reacts}}</td>
+								<td><b class="color-medium">{{row.grossAdds}}</b></td>
+								<td class="gray-light">{{row.deacts}}</td>
+								<td class="gray-light">{{row.mig}}</td>
+								<td><b class="color-medium">{{row.net}}</td>
+							</tr>
+						<tbody>
+				</table>
+			</span>
+		</div>
+
+	</div>
+	<div class="section active" id="section1">
+		<div class="wrapper-monthly	">
+			<div class="title-table f-18">
+				<span class="color-blue">Monthly report</span> 
+				<span class="color-disable">of </span>
+				<span class="color-high">May 01, 2018</span>
+				<span class="color-disable">to </span>
+				<span class="color-high">May 26, 2018</span>
+			</div>
+			
+			<span class="wrapper-table">
+				<table class="daily monthly">
+				<thead>
+					<tr>
+						<td class="b-blue-right">Serv Cat</td>
+						<td class="text-left b-blue-right b-blue-top"> <span>All times</span><br/> <b class="color-high">Begin Units</b></td>
+						<td class="color-disable"><span class="align-left">New Adds</span> <b class="color-disable f-20">+</b></td>
+						<td class="color-disable"><span class="align-left">Add-Ons</span> <b class="color-disable f-20">+</b></td>
+						<td class="color-disable"><span class="align-left">Reacts</span> <b class="color-disable f-20">=</b></td>
+						<td> <span class="align-left"><b> Gross Adds</b></span> <b class="color-disable f-20">-</b></td>
+						<td class="color-disable"><span class="align-left">Deacts</span> <b class="color-disable f-20">+</b></td>
+						<td class="color-disable"><span class="align-left">Mig</span> <b class="color-disable f-20">=</b></td>
+						<td class="b-blue-right"> <span class="align-left"><b>Net</b></span> </td>
+						<td class="text-left b-blue-right b-blue-top"> <span>All times</span><br/> <b class="color-high">End Units</b></td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="row in inar.monthly.list">
+						<td class="b-blue-right">{{row.servCat}}</td>
+						<td class="b-blue-right"><b class="color-medium">{{row.beginUnits}}</b></td>
+						<td class="gray-light">{{row.newAdds}}</td>
+						<td class="gray-light">{{row.addOns}}</td>
+						<td class="gray-light">{{row.reacts}}</td>
+						<td><b class="color-medium">{{row.grossAdds}}</b></td>
+						<td class="gray-light">{{row.deacts}}</td>
+						<td class="gray-light">{{row.mig}}</td>
+						<td class="b-blue-right"><b class="color-medium">{{row.net}}</td>
+						<td class="b-blue-right"><b class="color-medium">{{row.endUnits}}</b></td>
+					</tr>
+					<tr>
+						<td class="b-blue-right"><b>{{inar.monthly.total.servCat}}</b></td>
+						<td class="b-blue-right b-blue-bottom"><b>{{inar.monthly.total.beginUnits}}</b></td>
+						<td class="gray-light">{{inar.monthly.total.newAdds}}</td>
+						<td class="gray-light">{{inar.monthly.total.addOns}}</td>
+						<td class="gray-light">{{inar.monthly.total.reacts}}</td>
+						<td><b>{{inar.monthly.total.grossAdds}}</b></td>
+						<td class="gray-light">{{inar.monthly.total.deacts}}</td>
+						<td class="gray-light">{{inar.monthly.total.mig}}</td>
+						<td class="b-blue-right"><b>{{inar.monthly.total.net}}</b></td>
+						<td class="b-blue-right b-blue-bottom"><b>{{inar.monthly.total.endUnits}}</b></td>
+					</tr>
+				</tbody>
+				</table>
+				<br>
+				<br>
+				<table class="daily monthly ext">
+						<tbody>
+							<tr ng-repeat="row in inar.monthly.ext">
+								<td class="b-blue-right">{{row.servCat}}</td>
+								<td class="gray-light b-blue-right"><b class="color-medium">{{row.beginUnits}}</b></td>
+								<td class="gray-light">{{row.newAdds}}</td>
+								<td class="gray-light">{{row.addOns}}</td>
+								<td class="gray-light">{{row.reacts}}</td>
+								<td><b class="color-medium">{{row.grossAdds}}</b></td>
+								<td class="gray-light">{{row.deacts}}</td>
+								<td class="gray-light">{{row.mig}}</td>
+								<td class="b-blue-right"><b class="color-medium">{{row.net}}</td>
+								<td class="b-blue-right"><b class="color-medium">{{row.endUnits}}</td>
+							</tr>
+						<tbody>
+				</table>
+			</span>
+			<span class="wrapper-info">
+					<table class="daily monthly">
+					<thead>
+						<tr>
+							<td class="b-blue-right">Serv Cat</td>
+							<td class="text-left b-blue-right b-blue-top"> <span>All times</span><br/> <b class="color-high">Begin Units</b></td>
+							<td class="color-disable"><span class="align-left">New Adds</span> <b class="color-disable f-20">+</b></td>
+							<td class="color-disable"><span class="align-left">Add-Ons</span> <b class="color-disable f-20">+</b></td>
+							<td class="color-disable"><span class="align-left">Reacts</span> <b class="color-disable f-20">=</b></td>
+							<td> <span class="align-left"><b> Gross Adds</b></span> <b class="color-disable f-20">-</b></td>
+							<td class="color-disable"><span class="align-left">Deacts</span> <b class="color-disable f-20">+</b></td>
+							<td class="color-disable"><span class="align-left">Mig</span> <b class="color-disable f-20">=</b></td>
+							<td class="b-blue-right"> <span class="align-left"><b>Net</b></span> </td>
+							<td class="text-left b-blue-right b-blue-top"> <span>All times</span><br/> <b class="color-high">End Units</b></td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="row in inar.monthly.list">
+							<td class="b-blue-right">{{row.servCat}}</td>
+							<td class="b-blue-right"><b class="color-medium">{{row.beginUnits}}</b></td>
+							<td class="gray-light">{{row.newAdds}}</td>
+							<td class="gray-light">{{row.addOns}}</td>
+							<td class="gray-light">{{row.reacts}}</td>
+							<td><b class="color-medium">{{row.grossAdds}}</b></td>
+							<td class="gray-light">{{row.deacts}}</td>
+							<td class="gray-light">{{row.mig}}</td>
+							<td class="b-blue-right"><b class="color-medium">{{row.net}}</td>
+							<td class="b-blue-right"><b class="color-medium">{{row.endUnits}}</b></td>
+						</tr>
+						<tr>
+							<td class="b-blue-right"><b>{{inar.monthly.total.servCat}}</b></td>
+							<td class="b-blue-right b-blue-bottom"><b>{{inar.monthly.total.beginUnits}}</b></td>
+							<td class="gray-light">{{inar.monthly.total.newAdds}}</td>
+							<td class="gray-light">{{inar.monthly.total.addOns}}</td>
+							<td class="gray-light">{{inar.monthly.total.reacts}}</td>
+							<td><b>{{inar.monthly.total.grossAdds}}</b></td>
+							<td class="gray-light">{{inar.monthly.total.deacts}}</td>
+							<td class="gray-light">{{inar.monthly.total.mig}}</td>
+							<td class="b-blue-right"><b>{{inar.monthly.total.net}}</b></td>
+							<td class="b-blue-right b-blue-bottom"><b>{{inar.monthly.total.endUnits}}</b></td>
+						</tr>
+					</tbody>
+					</table>
+					<br>
+					<br>
+					<table class="daily monthly">
+							<tbody>
+								<tr ng-repeat="row in inar.monthly.ext">
+									<td class="b-blue-right">{{row.servCat}}</td>
+									<td class="gray-light b-blue-right"><b class="color-medium">{{row.beginUnits}}</b></td>
+									<td class="gray-light">{{row.newAdds}}</td>
+									<td class="gray-light">{{row.addOns}}</td>
+									<td class="gray-light">{{row.reacts}}</td>
+									<td><b class="color-medium">{{row.grossAdds}}</b></td>
+									<td class="gray-light">{{row.deacts}}</td>
+									<td class="gray-light">{{row.mig}}</td>
+									<td class="b-blue-right"><b class="color-medium">{{row.net}}</td>
+									<td class="b-blue-right"><b class="color-medium">{{row.endUnits}}</td>
+								</tr>
+							<tbody>
+					</table>
+				</span>
+		</div>
+	</div>
+	<div class="section" id="section2">
+		<div class="wrapper-monthly">
+			<div class="title-table f-18">
+				<span class="color-blue">Consolidated monthly report</span> 
+				<span class="color-disable">of </span>
+				<span class="color-high">May 01</span>
+				<span class="color-disable">to </span>
+				<span class="color-high">May 26, 2018</span>
+			</div>
+		<table class="daily">
+			<thead>
+				<tr>
+					<td>Serv Cat</td>
+					<td class="color-disable"><span class="align-left">New Adds</span> <b class="color-disable f-20">+</b></td>
+					<td class="color-disable"><span class="align-left">Add-Ons</span> <b class="color-disable f-20">+</b></td>
+					<td class="color-disable"><span class="align-left">Reacts</span> <b class="color-disable f-20">=</b></td>
+					<td> <span class="align-left"><b> Gross Adds</b></span> <b class="color-disable f-20">-</b></td>
+					<td class="color-disable"><span class="align-left">Deacts</span> <b class="color-disable f-20">+</b></td>
+					<td class="color-disable"><span class="align-left">Mig</span> <b class="color-disable f-20">=</b></td>
+					<td> <span class="align-left"><b>Net</b></span> </td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="row in inar.monthly.list">
+					<td>{{row.servCat}}</td>
+					<td class="gray-light">{{row.newAdds}}</td>
+					<td class="gray-light">{{row.addOns}}</td>
+					<td class="gray-light">{{row.reacts}}</td>
+					<td><b class="color-medium">{{row.grossAdds}}</b></td>
+					<td class="gray-light">{{row.deacts}}</td>
+					<td class="gray-light">{{row.mig}}</td>
+					<td><b class="color-medium">{{row.net}}</td>
+				</tr>
+				<tr>
+					<td class="gray-light"><b>{{inar.monthly.total.servCat}}</b></td>
+					<td class="gray-light">{{inar.monthly.total.newAdds}}</td>
+					<td class="gray-light">{{inar.monthly.total.addOns}}</td>
+					<td class="gray-light">{{inar.monthly.total.reacts}}</td>
+					<td><b>{{inar.monthly.total.grossAdds}}</b></td>
+					<td class="gray-light">{{inar.monthly.total.deacts}}</td>
+					<td class="gray-light">{{inar.monthly.total.mig}}</td>
+					<td><b>{{inar.monthly.total.net}}</b></td>
+				</tr>
+			</tbody>
+		</table>
+		<br>
+		<br>
+		<table class="daily">
+				<tbody>
+					<tr ng-repeat="row in inar.daily.ext">
+						<td>{{row.servCat}}</td>
+						<td class="gray-light">{{row.newAdds}}</td>
+						<td class="gray-light">{{row.addOns}}</td>
+						<td class="gray-light">{{row.reacts}}</td>
+						<td>{{row.grossAdds}}</td>
+						<td class="gray-light">{{row.deacts}}</td>
+						<td class="gray-light">{{row.mig}}</td>
+						<td><b class="color-medium">{{row.net}}</td>
+					</tr>
+				<tbody>
+		</table>
+		</div>
+	</div>
+</div>
