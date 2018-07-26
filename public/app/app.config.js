@@ -12,7 +12,7 @@
     $stateProvider
       .state({
         name: 'main',
-        url: '/main',
+        url: '/',
         templateUrl: 'app/views/main/main.html',
         controller: 'MainController',
         controllerAs: 'vm'
@@ -25,7 +25,7 @@
         controllerAs: 'vm'
       });
 
-    $urlRouterProvider.otherwise('main');
+    $urlRouterProvider.otherwise('/');
 
   }
 
