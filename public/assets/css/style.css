@@ -239,14 +239,23 @@ ul.line li:nth-child(6){
     padding-left: 10%;
     padding-right: 10%;
     position: relative;
-    height: 692px;
+    height: 547px;
 }
 .wrapper-monthly{
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
     position: relative;
     height: 692px;
 }
+.wrapper-consmonthly{
+    padding-left: 5%;
+    padding-right: 5%;
+    position: relative;
+    height: 652px;
+}
+
+.wrapper-consmonthly .wrapper-info,
+.wrapper-consmonthly .wrapper-table,
 .wrapper-monthly .wrapper-info,
 .wrapper-monthly .wrapper-table,
 .wrapper-daily .wrapper-table,
@@ -256,13 +265,17 @@ ul.line li:nth-child(6){
     right: 10%;
     opacity: 0;
 }
+.wrapper-consmonthly .wrapper-table .title-table,
+.wrapper-consmonthly .wrapper-table table tr td,
+.wrapper-consmonthly .wrapper-table table tr td b,
+.wrapper-consmonthly .wrapper-table table tr td span,
 .wrapper-monthly .wrapper-table table tr td,
 .wrapper-monthly .wrapper-table table tr td b,
 .wrapper-daily .wrapper-table table tr td,
 .wrapper-daily .wrapper-table table tr td b{
     color: transparent!important;
 }
-
+.wrapper-consmonthly .wrapper-info table.daily tr td,
 .wrapper-monthly .wrapper-info table.daily tr td,
 .wrapper-daily .wrapper-info table.daily tr td{
     border: 1px solid transparent!important;
@@ -284,8 +297,12 @@ table.monthly tr td{
     text-align: right;
     color: rgba(0,0,0,.6);
 }
+table.daily.ext-min tr:first-child td{
+    text-align: left;
+}
 
 b{
+    font-weight: 400;
     color: rgba(0,0,0,.87);
     font-family: 'PoppinsBold', 'Times New Roman';
 }
@@ -297,10 +314,13 @@ table.daily tr td:first-child{
 table.daily tr td:last-child{
     border-right: 1px solid rgb(224,224,224);
 }
+table.last-churn tr td{
+    border:1px solid rgb(224,224,224);
+    text-align: left;
+    width: 33%!important;
+}
 table.monthly tr td:first-child{
     width: 10.9%;
-}
-table.monthly tr td:last-child{
 }
 table.monthly.ext tr:first-child td:nth-child(2),
 table.monthly.ext tr:first-child td:nth-child(10){
@@ -314,6 +334,27 @@ table.daily tr td.text-left{
     text-align: left;
 }
 
+
+footer{
+    padding-left: 5%;
+    padding-right: 5%;
+    position: fixed;
+    bottom: 0;
+    height: 80px;
+    width: 100%;
+    color: rgba(0,0,0,.38);
+    background-color: rgb(255,255,255);
+}   
+footer .wrapper{
+    border-top: 1px solid rgb(225,225,225);
+    padding-top: 20px;
+}
+footer .left{
+float: left;
+}
+footer .right{
+float: right;
+}
 
 
 .b-blue-right{
@@ -353,12 +394,29 @@ table.daily tr td.text-left{
 .f-18{
     font-size: 18px;
 }
+.f-14{
+    font-size: 14px;
+}
 
 .title-table{
     font-family: PoppinsLight, 'Times New Roman';
     text-align: left;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+ul.grid-two{
+    height: 218px;
+}
+ul.grid-two li {
+    width: 54%;
+    float: left;
+    margin-right: 1%;
+}
+ul.grid-two li:last-child {
+    margin-right: 0;
+    margin-left: 1%;
+    width: 44%;
 }
 
 
@@ -381,20 +439,20 @@ table.daily tr td.text-left{
     /* animation-delay: 1s; */
 }
 @-webkit-keyframes leftin0 {
-    to {left: -20%; right: 50%; opacity: 0;}
-    from {left: 15%;right: 15%; opacity: 1;}
+    to {left: 10%; right: 10%; opacity: 0;}
+    from {left: 10%;right: 10%; opacity: 1;}
 }
 @keyframes leftin0 {
-    to {left: -20%; right: 50%; opacity: 0;}
-    from {left: 15%;right: 15%; opacity: 1;}
+    to {left: 10%; right: 10%; opacity: 0;}
+    from {left: 10%;right: 10%; opacity: 1;}
 }
 @-webkit-keyframes rightin0 {
     to {left: 50%; right: -20%; opacity: 0;}
-    from {left: 15%;right: 15%; opacity: 1;}
+    from {left: 10%;right: 10%; opacity: 1;}
 }
 @keyframes rightin0 {
     to {left: 50%; right: -20%; opacity: 0;}
-    from {left: 15%;right: 15%; opacity: 1;}
+    from {left: 10%;right: 10%; opacity: 1;}
 }
 .fp-section.active .wrapper-daily .wrapper-table{ 
     -webkit-animation-name: leftout0;  /* Safari 4.0 - 8.0 */
@@ -414,11 +472,11 @@ table.daily tr td.text-left{
     animation-delay: 1s;
 }
 @-webkit-keyframes leftout0 {
-    from {left: -30%; right: 50%; opacity: 0;}
+    from {left: 10%; right: 10%; opacity: 0;}
     to {left: 10%;right: 10%; opacity: 1;}
 }
 @keyframes leftout0 {
-    from {left: -30%; right: 50%; opacity: 0;}
+    from {left: 10%; right: 10%; opacity: 0;}
     to {left: 10%;right: 10%; opacity: 1;}
 }
 @-webkit-keyframes rightout0 {
@@ -437,8 +495,9 @@ table.daily tr td.text-left{
     -webkit-animation-duration: 3s;  /* Safari 4.0 - 8.0 */    
     -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
     animation-name: leftin1;
-    animation-duration: 2s;    
+    animation-duration: 3s;    
     animation-fill-mode: forwards;
+    /* animation-delay: 1s; */
 }
 .fp-section .wrapper-monthly .wrapper-info{ 
     -webkit-animation-name: rightin1;  /* Safari 4.0 - 8.0 */
@@ -447,23 +506,22 @@ table.daily tr td.text-left{
     animation-name: rightin1;
     animation-duration: 1s;    
     animation-fill-mode: forwards;
-    /* animation-delay: 1s; */
 }
 @-webkit-keyframes leftin1 {
-    to {left: -20%; right: 50%; opacity: 0;}
-    from {left: 15%;right: 15%; opacity: 1;}
+    to {left: 5%; right: 5%; opacity: 0;}
+    from {left: 5%;right: 5%; opacity: 1;}
 }
 @keyframes leftin1 {
-    to {left: -20%; right: 50%; opacity: 0;}
-    from {left: 15%;right: 15%; opacity: 1;}
+    to {left: 5%; right: 5%; opacity: 0;}
+    from {left: 5%;right: 5%; opacity: 1;}
 }
 @-webkit-keyframes rightin1 {
     to {left: 50%; right: -20%; opacity: 0;}
-    from {left: 15%;right: 15%; opacity: 1;}
+    from {left: 5%;right: 5%; opacity: 1;}
 }
 @keyframes rightin1 {
     to {left: 50%; right: -20%; opacity: 0;}
-    from {left: 15%;right: 15%; opacity: 1;}
+    from {left: 5%;right: 5%; opacity: 1;}
 }
 .fp-section.active .wrapper-monthly .wrapper-table{ 
     -webkit-animation-name: leftout1;  /* Safari 4.0 - 8.0 */
@@ -483,21 +541,92 @@ table.daily tr td.text-left{
     animation-delay: 1s;
 }
 @-webkit-keyframes leftout1 {
-    from {left: -30%; right: 50%; opacity: 0;}
-    to {left: 10%;right: 10%; opacity: 1;}
+    from {left: 5%; right: 5%; opacity: 0;}
+    to {left: 5%;right: 5%; opacity: 1;}
 }
 @keyframes leftout1 {
-    from {left: -30%; right: 50%; opacity: 0;}
-    to {left: 10%;right: 10%; opacity: 1;}
+    from {left: 5%; right: 5%; opacity: 0;}
+    to {left: 5%;right: 5%; opacity: 1;}
 }
 @-webkit-keyframes rightout1 {
     from {left: 50%; right: -30%; opacity: 0;}
-    to {left: 10%;right: 10%; opacity: 1;}
+    to {left: 10%;right: 5%; opacity: 1;}
 }
 @keyframes rightout1 {
     from {left: 50%; right: -30%; opacity: 0;}
-    to {left: 10%;right: 10%; opacity: 1;}
+    to {left: 5%;right: 5%; opacity: 1;}
 }
+
+
+
+.fp-section .wrapper-consmonthly .wrapper-table{ 
+    -webkit-animation-name: leftin2;  /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 3s;  /* Safari 4.0 - 8.0 */    
+    -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+    animation-name: leftin2;
+    animation-duration: 2s;    
+    animation-fill-mode: forwards;
+}
+.fp-section .wrapper-consmonthly .wrapper-info{ 
+    -webkit-animation-name: rightin2;  /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s;  /* Safari 4.0 - 8.0 */    
+    -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+    animation-name: rightin2;
+    animation-duration: 1s;    
+    animation-fill-mode: forwards;
+    /* animation-delay: 1s; */
+}
+@-webkit-keyframes leftin2 {
+    to {left: 5%; right: 5%; opacity: 0;}
+    from {left: 5%;right: 5%; opacity: 1;}
+}
+@keyframes leftin2 {
+    to {left: 5%; right: 5%; opacity: 0;}
+    from {left: 5%;right: 5%; opacity: 1;}
+}
+@-webkit-keyframes rightin2 {
+    to {left: 50%; right: -20%; opacity: 0;}
+    from {left: 5%;right: 5%; opacity: 1;}
+}
+@keyframes rightin2 {
+    to {left: 50%; right: -20%; opacity: 0;}
+    from {left: 5%;right: 5%; opacity: 1;}
+}
+.fp-section.active .wrapper-consmonthly .wrapper-table{ 
+    -webkit-animation-name: leftout2;  /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s;  /* Safari 4.0 - 8.0 */    
+    -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+    animation-name: leftout2;
+    animation-duration: 2s;    
+    animation-fill-mode: forwards;
+}
+.fp-section.active .wrapper-consmonthly .wrapper-info{ 
+    -webkit-animation-name: rightout2;  /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s;  /* Safari 4.0 - 8.0 */    
+    -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+    animation-name: rightout2;
+    animation-duration: 1s;    
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+@-webkit-keyframes leftout2 {
+    from {left: 5%; right: 5%; opacity: 0;}
+    to {left: 5%;right: 5%; opacity: 1;}
+}
+@keyframes leftout2 {
+    from {left: 5%; right: 5%; opacity: 0;}
+    to {left: 5%;right: 5%; opacity: 1;}
+}
+@-webkit-keyframes rightout2 {
+    from {left: 50%; right: -30%; opacity: 0;}
+    to {left: 5%;right: 5%; opacity: 1;}
+}
+@keyframes rightout2 {
+    from {left: 50%; right: -30%; opacity: 0;}
+    to {left: 5%;right: 5%; opacity: 1;}
+}
+
+
 
 
 

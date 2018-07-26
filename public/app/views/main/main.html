@@ -32,8 +32,7 @@
 </header>
 
 <div full-page options="vm.mainOptions">
-  	<div class="section " id="section0">
-		
+  	<div class="section">
 		<div class="wrapper-daily">
 			<div class="title-table f-18">
 				<span class="color-blue">Daily report</span> 
@@ -152,7 +151,7 @@
 		</div>
 
 	</div>
-	<div class="section active" id="section1">
+	<div class="section">
 		<div class="wrapper-monthly	">
 			<div class="title-table f-18">
 				<span class="color-blue">Monthly report</span> 
@@ -225,7 +224,7 @@
 				</table>
 			</span>
 			<span class="wrapper-info">
-					<table class="daily monthly">
+				<table class="daily monthly">
 					<thead>
 						<tr>
 							<td class="b-blue-right">Serv Cat</td>
@@ -266,9 +265,9 @@
 							<td class="b-blue-right b-blue-bottom"><b>{{inar.monthly.total.endUnits}}</b></td>
 						</tr>
 					</tbody>
-					</table>
-					<br>
-					<br>
+				</table>
+				<br>
+				<br>
 					<table class="daily monthly">
 							<tbody>
 								<tr ng-repeat="row in inar.monthly.ext">
@@ -288,67 +287,210 @@
 				</span>
 		</div>
 	</div>
-	<div class="section" id="section2">
-		<div class="wrapper-monthly">
+	<div class="section">
+		<div class="wrapper-consmonthly">
 			<div class="title-table f-18">
 				<span class="color-blue">Consolidated monthly report</span> 
 				<span class="color-disable">of </span>
-				<span class="color-high">May 01</span>
+				<span class="color-high">May 01, 2018</span>
 				<span class="color-disable">to </span>
 				<span class="color-high">May 26, 2018</span>
 			</div>
-		<table class="daily">
-			<thead>
-				<tr>
-					<td>Serv Cat</td>
-					<td class="color-disable"><span class="align-left">New Adds</span> <b class="color-disable f-20">+</b></td>
-					<td class="color-disable"><span class="align-left">Add-Ons</span> <b class="color-disable f-20">+</b></td>
-					<td class="color-disable"><span class="align-left">Reacts</span> <b class="color-disable f-20">=</b></td>
-					<td> <span class="align-left"><b> Gross Adds</b></span> <b class="color-disable f-20">-</b></td>
-					<td class="color-disable"><span class="align-left">Deacts</span> <b class="color-disable f-20">+</b></td>
-					<td class="color-disable"><span class="align-left">Mig</span> <b class="color-disable f-20">=</b></td>
-					<td> <span class="align-left"><b>Net</b></span> </td>
-				</tr>
-			</thead>
-			<tbody>
-				<tr ng-repeat="row in inar.monthly.list">
-					<td>{{row.servCat}}</td>
-					<td class="gray-light">{{row.newAdds}}</td>
-					<td class="gray-light">{{row.addOns}}</td>
-					<td class="gray-light">{{row.reacts}}</td>
-					<td><b class="color-medium">{{row.grossAdds}}</b></td>
-					<td class="gray-light">{{row.deacts}}</td>
-					<td class="gray-light">{{row.mig}}</td>
-					<td><b class="color-medium">{{row.net}}</td>
-				</tr>
-				<tr>
-					<td class="gray-light"><b>{{inar.monthly.total.servCat}}</b></td>
-					<td class="gray-light">{{inar.monthly.total.newAdds}}</td>
-					<td class="gray-light">{{inar.monthly.total.addOns}}</td>
-					<td class="gray-light">{{inar.monthly.total.reacts}}</td>
-					<td><b>{{inar.monthly.total.grossAdds}}</b></td>
-					<td class="gray-light">{{inar.monthly.total.deacts}}</td>
-					<td class="gray-light">{{inar.monthly.total.mig}}</td>
-					<td><b>{{inar.monthly.total.net}}</b></td>
-				</tr>
-			</tbody>
-		</table>
-		<br>
-		<br>
-		<table class="daily">
+		
+			
+
+			<span class="wrapper-table">
+				<table class="daily monthly">
+				<thead>
+					<tr>
+						<td class="b-blue-right">Serv Cat</td>
+						<td class="text-left b-blue-right b-blue-top"> <span>All times</span><br/> <b class="color-high">Begin Units</b></td>
+						<td class="color-disable"><span class="align-left">New Adds</span> <b class="color-disable f-20">+</b></td>
+						<td class="color-disable"><span class="align-left">Add-Ons</span> <b class="color-disable f-20">+</b></td>
+						<td class="color-disable"><span class="align-left">Reacts</span> <b class="color-disable f-20">=</b></td>
+						<td> <span class="align-left"><b> Gross Adds</b></span> <b class="color-disable f-20">-</b></td>
+						<td class="color-disable"><span class="align-left">Deacts</span> <b class="color-disable f-20">+</b></td>
+						<td class="color-disable"><span class="align-left">Mig</span> <b class="color-disable f-20">=</b></td>
+						<td class="b-blue-right"> <span class="align-left"><b>Net</b></span> </td>
+						<td class="text-left b-blue-right b-blue-top"> <span>All times</span><br/> <b class="color-high">End Units</b></td>
+					</tr>
+				</thead>
 				<tbody>
-					<tr ng-repeat="row in inar.daily.ext">
-						<td>{{row.servCat}}</td>
+					<tr ng-repeat="row in inar.consMonthly.list">
+						<td class="b-blue-right">{{row.servCat}}</td>
+						<td class="b-blue-right"><b class="color-medium">{{row.beginUnits}}</b></td>
 						<td class="gray-light">{{row.newAdds}}</td>
 						<td class="gray-light">{{row.addOns}}</td>
 						<td class="gray-light">{{row.reacts}}</td>
-						<td>{{row.grossAdds}}</td>
+						<td><b class="color-medium">{{row.grossAdds}}</b></td>
 						<td class="gray-light">{{row.deacts}}</td>
 						<td class="gray-light">{{row.mig}}</td>
-						<td><b class="color-medium">{{row.net}}</td>
+						<td class="b-blue-right"><b class="color-medium">{{row.net}}</td>
+						<td class="b-blue-right"><b class="color-medium">{{row.endUnits}}</b></td>
 					</tr>
+					<tr>
+						<td class="b-blue-right"><b>{{inar.consMonthly.total.servCat}}</b></td>
+						<td class="b-blue-right b-blue-bottom"><b>{{inar.consMonthly.total.beginUnits}}</b></td>
+						<td class="gray-light">{{inar.consMonthly.total.newAdds}}</td>
+						<td class="gray-light">{{inar.consMonthly.total.addOns}}</td>
+						<td class="gray-light">{{inar.consMonthly.total.reacts}}</td>
+						<td><b>{{inar.consMonthly.total.grossAdds}}</b></td>
+						<td class="gray-light">{{inar.consMonthly.total.deacts}}</td>
+						<td class="gray-light">{{inar.consMonthly.total.mig}}</td>
+						<td class="b-blue-right"><b>{{inar.consMonthly.total.net}}</b></td>
+						<td class="b-blue-right b-blue-bottom"><b>{{inar.consMonthly.total.endUnits}}</b></td>
+					</tr>
+				</tbody>
+				</table>
+				<ul class="grid-two">
+						<li>
+							<div class="title-table f-18">Internal Use</div>
+							<table class="daily ext-min">
+								<tbody>
+										<tr ng-repeat="row in inar.consMonthly.internalUse">
+											<td>{{row.company}}</td>
+											<td>{{row.employee}}</td>
+											<td>{{row.demo}}</td>
+											<td>{{row.test}}</td>
+											<td>{{row.roaming}}</td>
+										</tr>
+									<tbody>
+							</table>
+						</li>
+						<li>
+							<div class="title-table f-18">Non Commercial Base</div>
+							<table class="daily ext-min">
+								<tbody>
+										<tr ng-repeat="row in inar.consMonthly.nonComercialBase">
+											<td>{{row.company}}</td>
+											<td>{{row.employee}}</td>
+											<td>{{row.demo}}</td>
+											<td>{{row.test}}</td>
+										</tr>
+									<tbody>
+							</table>
+						</li>
+					</ul>
+				<div class="title-table f-18">Churn</div>
+				<table class="daily last-churn">
+					<tbody>
+							<tr>
+								<td> <span>Month-To-Date Churn</span> <span class="color-high">Pospago(%):</span> <b class="f-14">{{inar.consMonthly.churn.pospago}}</b></td>
+								<td> <span>Month-To-Date Churn</span> <span class="color-high">Prepago AT&T Total(%):</span> <b class="f-14">{{inar.consMonthly.churn.prepagoATTTotal}}</b></td>
+								<td> <span>Month-To-Date Churn</span> <span class="color-high">Other(%):</span> <b class="f-14">{{inar.consMonthly.churn.other}}</b></td>
+							</tr>
+							<tr>
+								<td> <span>Month-To-Date Churn</span> <span class="color-high">Prepago Unefon(%):</span> <b class="f-14">{{inar.consMonthly.churn.prepagoUnefon}}</b></td>
+								<td> <span>Month-To-Date Churn</span> <span class="color-high">Prepago(%):</span> <b class="f-14">{{inar.consMonthly.churn.prepago}}</b></td>
+								<td> <span>Month-To-Date Churn</span> <span class="color-high">AT&T Total(%):</span> <b class="f-14">{{inar.consMonthly.churn.ATTTotal}}</b></td>
+							</tr>
+						<tbody>
+					</table>
+			</span>
+			<span class="wrapper-info">
+				<table class="daily monthly">
+				<thead>
+					<tr>
+						<td class="b-blue-right">Serv Cat</td>
+						<td class="text-left b-blue-right b-blue-top"> <span>All times</span><br/> <b class="color-high">Begin Units</b></td>
+						<td class="color-disable"><span class="align-left">New Adds</span> <b class="color-disable f-20">+</b></td>
+						<td class="color-disable"><span class="align-left">Add-Ons</span> <b class="color-disable f-20">+</b></td>
+						<td class="color-disable"><span class="align-left">Reacts</span> <b class="color-disable f-20">=</b></td>
+						<td> <span class="align-left"><b> Gross Adds</b></span> <b class="color-disable f-20">-</b></td>
+						<td class="color-disable"><span class="align-left">Deacts</span> <b class="color-disable f-20">+</b></td>
+						<td class="color-disable"><span class="align-left">Mig</span> <b class="color-disable f-20">=</b></td>
+						<td class="b-blue-right"> <span class="align-left"><b>Net</b></span> </td>
+						<td class="text-left b-blue-right b-blue-top"> <span>All times</span><br/> <b class="color-high">End Units</b></td>
+					</tr>
+				</thead>
 				<tbody>
-		</table>
+					<tr ng-repeat="row in inar.consMonthly.list">
+						<td class="b-blue-right">{{row.servCat}}</td>
+						<td class="b-blue-right"><b class="color-medium">{{row.beginUnits}}</b></td>
+						<td class="gray-light">{{row.newAdds}}</td>
+						<td class="gray-light">{{row.addOns}}</td>
+						<td class="gray-light">{{row.reacts}}</td>
+						<td><b class="color-medium">{{row.grossAdds}}</b></td>
+						<td class="gray-light">{{row.deacts}}</td>
+						<td class="gray-light">{{row.mig}}</td>
+						<td class="b-blue-right"><b class="color-medium">{{row.net}}</td>
+						<td class="b-blue-right"><b class="color-medium">{{row.endUnits}}</b></td>
+					</tr>
+					<tr>
+						<td class="b-blue-right"><b>{{inar.consMonthly.total.servCat}}</b></td>
+						<td class="b-blue-right b-blue-bottom"><b>{{inar.consMonthly.total.beginUnits}}</b></td>
+						<td class="gray-light">{{inar.consMonthly.total.newAdds}}</td>
+						<td class="gray-light">{{inar.consMonthly.total.addOns}}</td>
+						<td class="gray-light">{{inar.consMonthly.total.reacts}}</td>
+						<td><b>{{inar.consMonthly.total.grossAdds}}</b></td>
+						<td class="gray-light">{{inar.consMonthly.total.deacts}}</td>
+						<td class="gray-light">{{inar.consMonthly.total.mig}}</td>
+						<td class="b-blue-right"><b>{{inar.consMonthly.total.net}}</b></td>
+						<td class="b-blue-right b-blue-bottom"><b>{{inar.consMonthly.total.endUnits}}</b></td>
+					</tr>
+				</tbody>
+				</table>
+				<ul class="grid-two">
+					<li>
+						<div class="title-table f-18">Internal Use</div>
+						<table class="daily ext-min">
+							<tbody>
+									<tr ng-repeat="row in inar.consMonthly.internalUse">
+										<td>{{row.company}}</td>
+										<td>{{row.employee}}</td>
+										<td>{{row.demo}}</td>
+										<td>{{row.test}}</td>
+										<td>{{row.roaming}}</td>
+									</tr>
+								<tbody>
+						</table>
+					</li>
+					<li>
+						<div class="title-table f-18">Non Commercial Base</div>
+						<table class="daily ext-min">
+							<tbody>
+									<tr ng-repeat="row in inar.consMonthly.nonComercialBase">
+										<td>{{row.company}}</td>
+										<td>{{row.employee}}</td>
+										<td>{{row.demo}}</td>
+										<td>{{row.test}}</td>
+									</tr>
+								<tbody>
+						</table>
+					</li>
+				</ul>
+				<div class="title-table f-18">Churn</div>
+				<table class="daily last-churn">
+					<tbody>
+							<tr>
+								<td> <span>Month-To-Date Churn</span> <span class="color-high">Pospago(%):</span> <b class="f-14">{{inar.consMonthly.churn.pospago}}</b></td>
+								<td> <span>Month-To-Date Churn</span> <span class="color-high">Prepago AT&T Total(%):</span> <b class="f-14">{{inar.consMonthly.churn.prepagoATTTotal}}</b></td>
+								<td> <span>Month-To-Date Churn</span> <span class="color-high">Other(%):</span> <b class="f-14">{{inar.consMonthly.churn.other}}</b></td>
+							</tr>
+							<tr>
+								<td> <span>Month-To-Date Churn</span> <span class="color-high">Prepago Unefon(%):</span> <b class="f-14">{{inar.consMonthly.churn.prepagoUnefon}}</b></td>
+								<td> <span>Month-To-Date Churn</span> <span class="color-high">Prepago(%):</span> <b class="f-14">{{inar.consMonthly.churn.prepago}}</b></td>
+								<td> <span>Month-To-Date Churn</span> <span class="color-high">AT&T Total(%):</span> <b class="f-14">{{inar.consMonthly.churn.ATTTotal}}</b></td>
+							</tr>
+						<tbody>
+					</table>
+			</span>
+		
+		
 		</div>
 	</div>
 </div>
+
+
+<footer>
+	<div class="wrapper">
+		<div class="left">
+			<div>Confidental and proprietary information</div>
+			<div>For Internal Use Only</div>
+		</div>
+		<div class="right">
+			<div>AT&T Mexico, LLC.</div>
+			<div><b class="color-disable">DO NOT COPY OR DISTRIBUTE</b></div>
+		</div>
+	</div>
+</footer>

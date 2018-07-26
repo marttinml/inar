@@ -1,6 +1,6 @@
 ;(function() {
   'use strict';
- 
+
   angular
     .module('fullPage.js', [])
     .directive('fullPage', fullPage);
@@ -39,6 +39,7 @@
       var sanatizeOptions = function(options) {
         options.onLeave = function(page, next){
           pageIndex = next;
+          options.change && options.change(page, next);
         };
 
         options.onSlideLeave = function(anchorLink, page, slide, direction, next){
