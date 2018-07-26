@@ -86,6 +86,10 @@
     {of:"May 01, 2018", to:"May 26, 2018" },
   ]
 
+  this.isString = function(val){
+      return isNaN(val);
+  }
+
     this.mainOptions = {
       sectionsColor: ['rgb(255,255,255)', 'rgb(255,255,255)', 'rgb(255,255,255)'],
       navigation: true,

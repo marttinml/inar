@@ -57,22 +57,22 @@
 							<tbody>
 								<tr ng-repeat="row in inar.daily.list">
 									<td>{{row.servCat}}</td>
-									<td class="gray-light">{{row.newAdds}}</td>
-									<td class="gray-light">{{row.addOns}}</td>
-									<td class="gray-light">{{row.reacts}}</td>
-									<td><b class="">{{row.grossAdds}}</b></td>
-									<td class="gray-light">{{row.deacts}}</td>
-									<td class="gray-light">{{row.mig}}</td>
-									<td><b class="">{{row.net}}</td>
+									<td class="gray-light">{{row.newAdds | number}}</td>
+									<td class="gray-light">{{row.addOns | number}}</td>
+									<td class="gray-light">{{row.reacts | number}}</td>
+									<td><b class="color-medium">{{row.grossAdds | number}}</b></td>
+									<td class="gray-light">{{row.deacts | number}}</td>
+									<td class="gray-light">{{row.mig | number}}</td>
+									<td><b class="">{{row.net | number}}</td>
 								</tr>
 								<tr>
-									<td class="gray-light"><b>{{inar.daily.total.servCat}}</b></td>
-									<td class="gray-light">{{inar.daily.total.newAdds}}</td>
-									<td class="gray-light">{{inar.daily.total.addOns}}</td>
-									<td class="gray-light">{{inar.daily.total.reacts}}</td>
+									<td class="gray-light"><b>{{inar.daily.total.servCat | number}}</b></td>
+									<td class="gray-light">{{inar.daily.total.newAdds | number}}</td>
+									<td class="gray-light">{{inar.daily.total.addOns | number}}</td>
+									<td class="gray-light">{{inar.daily.total.reacts | number}}</td>
 									<td><b>{{inar.daily.total.grossAdds}}</b></td>
-									<td class="gray-light">{{inar.daily.total.deacts}}</td>
-									<td class="gray-light">{{inar.daily.total.mig}}</td>
+									<td class="gray-light">{{inar.daily.total.deacts | number}}</td>
+									<td class="gray-light">{{inar.daily.total.mig | number}}</td>
 									<td><b>{{inar.daily.total.net}}</b></td>
 								</tr>
 							</tbody>
@@ -83,13 +83,13 @@
 								<tbody>
 									<tr ng-repeat="row in inar.daily.ext">
 										<td>{{row.servCat}}</td>
-										<td class="gray-light">{{row.newAdds}}</td>
-										<td class="gray-light">{{row.addOns}}</td>
-										<td class="gray-light">{{row.reacts}}</td>
-										<td>{{row.grossAdds}}</td>
-										<td class="gray-light">{{row.deacts}}</td>
-										<td class="gray-light">{{row.mig}}</td>
-										<td><b class="">{{row.net}}</td>
+										<td class="gray-light">{{row.newAdds | number}}</td>
+										<td class="gray-light">{{row.addOns | number}}</td>
+										<td class="gray-light">{{row.reacts | number}}</td>
+										<td>{{row.grossAdds | number}}</td>
+										<td class="gray-light">{{row.deacts | number}}</td>
+										<td class="gray-light">{{row.mig | number}}</td>
+										<td><b class="">{{row.net | number}}</td>
 									</tr>
 								<tbody>
 						</table>
@@ -111,23 +111,23 @@
 					<tbody>
 						<tr ng-repeat="row in inar.daily.list">
 							<td>{{row.servCat}}</td>
-							<td class="gray-light">{{row.newAdds}}</td>
-							<td class="gray-light">{{row.addOns}}</td>
-							<td class="gray-light">{{row.reacts}}</td>
-							<td><b class="color-medium">{{row.grossAdds}}</b></td>
-							<td class="gray-light">{{row.deacts}}</td>
-							<td class="gray-light">{{row.mig}}</td>
-							<td><b class="color-medium">{{row.net}}</td>
+							<td class="gray-light">{{row.newAdds | number}}</td>
+							<td class="gray-light">{{row.addOns | number}}</td>
+							<td class="gray-light">{{row.reacts | number}}</td>
+							<td><b class="color-medium">{{row.grossAdds | number}}</b></td>
+							<td class="gray-light">{{row.deacts | number}}</td>
+							<td class="gray-light">{{row.mig | number}}</td>
+							<td><b class="color-medium">{{row.net | number}}</td>
 						</tr>
 						<tr>
-							<td class="gray-light"><b>{{inar.daily.total.servCat}}</b></td>
-							<td class="gray-light">{{inar.daily.total.newAdds}}</td>
-							<td class="gray-light">{{inar.daily.total.addOns}}</td>
-							<td class="gray-light">{{inar.daily.total.reacts}}</td>
-							<td><b>{{inar.daily.total.grossAdds}}</b></td>
-							<td class="gray-light">{{inar.daily.total.deacts}}</td>
-							<td class="gray-light">{{inar.daily.total.mig}}</td>
-							<td><b>{{inar.daily.total.net}}</b></td>
+							<td class="gray-light"><b>{{inar.daily.total.servCat | number}}</b></td>
+							<td class="gray-light">{{inar.daily.total.newAdds | number}}</td>
+							<td class="gray-light">{{inar.daily.total.addOns | number}}</td>
+							<td class="gray-light">{{inar.daily.total.reacts | number}}</td>
+							<td><b>{{inar.daily.total.grossAdds | number}}</b></td>
+							<td class="gray-light">{{inar.daily.total.deacts | number}}</td>
+							<td class="gray-light">{{inar.daily.total.mig | number}}</td>
+							<td><b>{{inar.daily.total.net | number}}</b></td>
 						</tr>
 					</tbody>
 				</table>
@@ -137,13 +137,13 @@
 						<tbody>
 							<tr ng-repeat="row in inar.daily.ext">
 								<td>{{row.servCat}}</td>
-								<td class="gray-light">{{row.newAdds}}</td>
-								<td class="gray-light">{{row.addOns}}</td>
-								<td class="gray-light">{{row.reacts}}</td>
-								<td><b class="color-medium">{{row.grossAdds}}</b></td>
-								<td class="gray-light">{{row.deacts}}</td>
-								<td class="gray-light">{{row.mig}}</td>
-								<td><b class="color-medium">{{row.net}}</td>
+								<td class="gray-light">{{row.newAdds | number}}</td>
+								<td class="gray-light">{{row.addOns | number}}</td>
+								<td class="gray-light">{{row.reacts | number}}</td>
+								<td><b class="color-medium">{{row.grossAdds | number}}</b></td>
+								<td class="gray-light">{{row.deacts | number}}</td>
+								<td class="gray-light">{{row.mig | number}}</td>
+								<td><b class="color-medium">{{row.net | number}}</td>
 							</tr>
 						<tbody>
 				</table>
@@ -180,27 +180,27 @@
 				<tbody>
 					<tr ng-repeat="row in inar.monthly.list">
 						<td class="b-blue-right">{{row.servCat}}</td>
-						<td class="b-blue-right"><b class="color-medium">{{row.beginUnits}}</b></td>
-						<td class="gray-light">{{row.newAdds}}</td>
-						<td class="gray-light">{{row.addOns}}</td>
-						<td class="gray-light">{{row.reacts}}</td>
-						<td><b class="color-medium">{{row.grossAdds}}</b></td>
-						<td class="gray-light">{{row.deacts}}</td>
-						<td class="gray-light">{{row.mig}}</td>
-						<td class="b-blue-right"><b class="color-medium">{{row.net}}</td>
-						<td class="b-blue-right"><b class="color-medium">{{row.endUnits}}</b></td>
+						<td class="b-blue-right"><b class="color-medium">{{row.beginUnits | number}}</b></td>
+						<td class="gray-light">{{row.newAdds | number}}</td>
+						<td class="gray-light">{{row.addOns | number}}</td>
+						<td class="gray-light">{{row.reacts | number}}</td>
+						<td><b class="color-medium">{{row.grossAdds | number}}</b></td>
+						<td class="gray-light">{{row.deacts | number}}</td>
+						<td class="gray-light">{{row.mig | number}}</td>
+						<td class="b-blue-right"><b class="color-medium">{{row.net | number}}</td>
+						<td class="b-blue-right"><b class="color-medium">{{row.endUnits | number}}</b></td>
 					</tr>
 					<tr>
-						<td class="b-blue-right"><b>{{inar.monthly.total.servCat}}</b></td>
-						<td class="b-blue-right b-blue-bottom"><b>{{inar.monthly.total.beginUnits}}</b></td>
-						<td class="gray-light">{{inar.monthly.total.newAdds}}</td>
-						<td class="gray-light">{{inar.monthly.total.addOns}}</td>
-						<td class="gray-light">{{inar.monthly.total.reacts}}</td>
-						<td><b>{{inar.monthly.total.grossAdds}}</b></td>
-						<td class="gray-light">{{inar.monthly.total.deacts}}</td>
-						<td class="gray-light">{{inar.monthly.total.mig}}</td>
-						<td class="b-blue-right"><b>{{inar.monthly.total.net}}</b></td>
-						<td class="b-blue-right b-blue-bottom"><b>{{inar.monthly.total.endUnits}}</b></td>
+						<td class="b-blue-right"><b>{{inar.monthly.total.servCat | number}}</b></td>
+						<td class="b-blue-right b-blue-bottom"><b>{{inar.monthly.total.beginUnits | number}}</b></td>
+						<td class="gray-light">{{inar.monthly.total.newAdds | number}}</td>
+						<td class="gray-light">{{inar.monthly.total.addOns | number}}</td>
+						<td class="gray-light">{{inar.monthly.total.reacts | number}}</td>
+						<td><b>{{inar.monthly.total.grossAdds | number}}</b></td>
+						<td class="gray-light">{{inar.monthly.total.deacts | number}}</td>
+						<td class="gray-light">{{inar.monthly.total.mig | number}}</td>
+						<td class="b-blue-right"><b>{{inar.monthly.total.net | number}}</b></td>
+						<td class="b-blue-right b-blue-bottom"><b>{{inar.monthly.total.endUnits | number}}</b></td>
 					</tr>
 				</tbody>
 				</table>
@@ -210,15 +210,15 @@
 						<tbody>
 							<tr ng-repeat="row in inar.monthly.ext">
 								<td class="b-blue-right">{{row.servCat}}</td>
-								<td class="gray-light b-blue-right"><b class="color-medium">{{row.beginUnits}}</b></td>
-								<td class="gray-light">{{row.newAdds}}</td>
-								<td class="gray-light">{{row.addOns}}</td>
-								<td class="gray-light">{{row.reacts}}</td>
-								<td><b class="color-medium">{{row.grossAdds}}</b></td>
-								<td class="gray-light">{{row.deacts}}</td>
-								<td class="gray-light">{{row.mig}}</td>
-								<td class="b-blue-right"><b class="color-medium">{{row.net}}</td>
-								<td class="b-blue-right"><b class="color-medium">{{row.endUnits}}</td>
+								<td class="gray-light b-blue-right"><b class="color-medium">{{row.beginUnits | number}}</b></td>
+								<td class="gray-light">{{row.newAdds | number}}</td>
+								<td class="gray-light">{{row.addOns | number}}</td>
+								<td class="gray-light">{{row.reacts | number}}</td>
+								<td><b class="color-medium">{{row.grossAdds | number}}</b></td>
+								<td class="gray-light">{{row.deacts | number}}</td>
+								<td class="gray-light">{{row.mig | number}}</td>
+								<td class="b-blue-right"><b class="color-medium">{{row.net | number}}</td>
+								<td class="b-blue-right"><b class="color-medium">{{row.endUnits | number}}</td>
 							</tr>
 						<tbody>
 				</table>
@@ -242,27 +242,27 @@
 					<tbody>
 						<tr ng-repeat="row in inar.monthly.list">
 							<td class="b-blue-right">{{row.servCat}}</td>
-							<td class="b-blue-right"><b class="color-medium">{{row.beginUnits}}</b></td>
-							<td class="gray-light">{{row.newAdds}}</td>
-							<td class="gray-light">{{row.addOns}}</td>
-							<td class="gray-light">{{row.reacts}}</td>
-							<td><b class="color-medium">{{row.grossAdds}}</b></td>
-							<td class="gray-light">{{row.deacts}}</td>
-							<td class="gray-light">{{row.mig}}</td>
-							<td class="b-blue-right"><b class="color-medium">{{row.net}}</td>
-							<td class="b-blue-right"><b class="color-medium">{{row.endUnits}}</b></td>
+							<td class="b-blue-right"><b class="color-medium">{{row.beginUnits | number}}</b></td>
+							<td class="gray-light">{{row.newAdds | number}}</td>
+							<td class="gray-light">{{row.addOns | number}}</td>
+							<td class="gray-light">{{row.reacts | number}}</td>
+							<td><b class="color-medium">{{row.grossAdds | number}}</b></td>
+							<td class="gray-light">{{row.deacts | number}}</td>
+							<td class="gray-light">{{row.mig | number}}</td>
+							<td class="b-blue-right"><b class="color-medium">{{row.net | number}}</td>
+							<td class="b-blue-right"><b class="color-medium">{{row.endUnits | number}}</b></td>
 						</tr>
 						<tr>
 							<td class="b-blue-right"><b>{{inar.monthly.total.servCat}}</b></td>
-							<td class="b-blue-right b-blue-bottom"><b>{{inar.monthly.total.beginUnits}}</b></td>
-							<td class="gray-light">{{inar.monthly.total.newAdds}}</td>
-							<td class="gray-light">{{inar.monthly.total.addOns}}</td>
-							<td class="gray-light">{{inar.monthly.total.reacts}}</td>
-							<td><b>{{inar.monthly.total.grossAdds}}</b></td>
-							<td class="gray-light">{{inar.monthly.total.deacts}}</td>
-							<td class="gray-light">{{inar.monthly.total.mig}}</td>
-							<td class="b-blue-right"><b>{{inar.monthly.total.net}}</b></td>
-							<td class="b-blue-right b-blue-bottom"><b>{{inar.monthly.total.endUnits}}</b></td>
+							<td class="b-blue-right b-blue-bottom"><b>{{inar.monthly.total.beginUnits | number}}</b></td>
+							<td class="gray-light">{{inar.monthly.total.newAdds | number}}</td>
+							<td class="gray-light">{{inar.monthly.total.addOns | number}}</td>
+							<td class="gray-light">{{inar.monthly.total.reacts | number}}</td>
+							<td><b>{{inar.monthly.total.grossAdds | number}}</b></td>
+							<td class="gray-light">{{inar.monthly.total.deacts | number}}</td>
+							<td class="gray-light">{{inar.monthly.total.mig | number}}</td>
+							<td class="b-blue-right"><b>{{inar.monthly.total.net | number}}</b></td>
+							<td class="b-blue-right b-blue-bottom"><b>{{inar.monthly.total.endUnits | number}}</b></td>
 						</tr>
 					</tbody>
 				</table>
@@ -272,15 +272,15 @@
 							<tbody>
 								<tr ng-repeat="row in inar.monthly.ext">
 									<td class="b-blue-right">{{row.servCat}}</td>
-									<td class="gray-light b-blue-right"><b class="color-medium">{{row.beginUnits}}</b></td>
-									<td class="gray-light">{{row.newAdds}}</td>
-									<td class="gray-light">{{row.addOns}}</td>
-									<td class="gray-light">{{row.reacts}}</td>
-									<td><b class="color-medium">{{row.grossAdds}}</b></td>
-									<td class="gray-light">{{row.deacts}}</td>
-									<td class="gray-light">{{row.mig}}</td>
-									<td class="b-blue-right"><b class="color-medium">{{row.net}}</td>
-									<td class="b-blue-right"><b class="color-medium">{{row.endUnits}}</td>
+									<td class="gray-light b-blue-right"><b class="color-medium">{{row.beginUnits | number}}</b></td>
+									<td class="gray-light">{{row.newAdds | number}}</td>
+									<td class="gray-light">{{row.addOns | number}}</td>
+									<td class="gray-light">{{row.reacts | number}}</td>
+									<td><b class="color-medium">{{row.grossAdds | number}}</b></td>
+									<td class="gray-light">{{row.deacts | number}}</td>
+									<td class="gray-light">{{row.mig | number}}</td>
+									<td class="b-blue-right"><b class="color-medium">{{row.net | number}}</td>
+									<td class="b-blue-right"><b class="color-medium">{{row.endUnits | number}}</td>
 								</tr>
 							<tbody>
 					</table>
@@ -318,27 +318,27 @@
 				<tbody>
 					<tr ng-repeat="row in inar.consMonthly.list">
 						<td class="b-blue-right">{{row.servCat}}</td>
-						<td class="b-blue-right"><b class="color-medium">{{row.beginUnits}}</b></td>
-						<td class="gray-light">{{row.newAdds}}</td>
-						<td class="gray-light">{{row.addOns}}</td>
-						<td class="gray-light">{{row.reacts}}</td>
-						<td><b class="color-medium">{{row.grossAdds}}</b></td>
-						<td class="gray-light">{{row.deacts}}</td>
-						<td class="gray-light">{{row.mig}}</td>
-						<td class="b-blue-right"><b class="color-medium">{{row.net}}</td>
-						<td class="b-blue-right"><b class="color-medium">{{row.endUnits}}</b></td>
+						<td class="b-blue-right"><b class="color-medium">{{row.beginUnits | number}}</b></td>
+						<td class="gray-light">{{row.newAdds | number}}</td>
+						<td class="gray-light">{{row.addOns | number}}</td>
+						<td class="gray-light">{{row.reacts | number}}</td>
+						<td><b class="color-medium">{{row.grossAdds | number}}</b></td>
+						<td class="gray-light">{{row.deacts | number}}</td>
+						<td class="gray-light">{{row.mig | number}}</td>
+						<td class="b-blue-right"><b class="color-medium">{{row.net | number}}</td>
+						<td class="b-blue-right"><b class="color-medium">{{row.endUnits | number}}</b></td>
 					</tr>
 					<tr>
-						<td class="b-blue-right"><b>{{inar.consMonthly.total.servCat}}</b></td>
-						<td class="b-blue-right b-blue-bottom"><b>{{inar.consMonthly.total.beginUnits}}</b></td>
-						<td class="gray-light">{{inar.consMonthly.total.newAdds}}</td>
-						<td class="gray-light">{{inar.consMonthly.total.addOns}}</td>
-						<td class="gray-light">{{inar.consMonthly.total.reacts}}</td>
-						<td><b>{{inar.consMonthly.total.grossAdds}}</b></td>
-						<td class="gray-light">{{inar.consMonthly.total.deacts}}</td>
-						<td class="gray-light">{{inar.consMonthly.total.mig}}</td>
-						<td class="b-blue-right"><b>{{inar.consMonthly.total.net}}</b></td>
-						<td class="b-blue-right b-blue-bottom"><b>{{inar.consMonthly.total.endUnits}}</b></td>
+						<td class="b-blue-right"><b>{{inar.consMonthly.total.servCat | number}}</b></td>
+						<td class="b-blue-right b-blue-bottom"><b>{{inar.consMonthly.total.beginUnits | number}}</b></td>
+						<td class="gray-light">{{inar.consMonthly.total.newAdds | number}}</td>
+						<td class="gray-light">{{inar.consMonthly.total.addOns | number}}</td>
+						<td class="gray-light">{{inar.consMonthly.total.reacts | number}}</td>
+						<td><b>{{inar.consMonthly.total.grossAdds | number}}</b></td>
+						<td class="gray-light">{{inar.consMonthly.total.deacts | number}}</td>
+						<td class="gray-light">{{inar.consMonthly.total.mig | number}}</td>
+						<td class="b-blue-right"><b>{{inar.consMonthly.total.net | number}}</b></td>
+						<td class="b-blue-right b-blue-bottom"><b>{{inar.consMonthly.total.endUnits | number}}</b></td>
 					</tr>
 				</tbody>
 				</table>
@@ -349,10 +349,10 @@
 								<tbody>
 										<tr ng-repeat="row in inar.consMonthly.internalUse">
 											<td>{{row.company}}</td>
-											<td>{{row.employee}}</td>
-											<td>{{row.demo}}</td>
-											<td>{{row.test}}</td>
-											<td>{{row.roaming}}</td>
+											<td>{{vm.isString(row.employee) ? row.employee : (row.employee | number)}}</td>
+											<td>{{vm.isString(row.demo) ? row.demo : (row.demo | number)}}</td>
+											<td>{{vm.isString(row.test) ? row.test : (row.test | number)}}</td>
+											<td>{{vm.isString(row.roaming) ? row.roaming : (row.roaming | number)}}</td>
 										</tr>
 									<tbody>
 							</table>
@@ -362,10 +362,10 @@
 							<table class="daily ext-min">
 								<tbody>
 										<tr ng-repeat="row in inar.consMonthly.nonComercialBase">
-											<td>{{row.company}}</td>
-											<td>{{row.employee}}</td>
-											<td>{{row.demo}}</td>
-											<td>{{row.test}}</td>
+												<td>{{row.company}}</td>
+												<td>{{vm.isString(row.employee) ? row.employee : (row.employee | number)}}</td>
+												<td>{{vm.isString(row.demo) ? row.demo : (row.demo | number)}}</td>
+												<td>{{vm.isString(row.test) ? row.test : (row.test | number)}}</td>
 										</tr>
 									<tbody>
 							</table>
@@ -375,14 +375,14 @@
 				<table class="daily last-churn">
 					<tbody>
 							<tr>
-								<td> <span>Month-To-Date Churn</span> <span class="color-high">Pospago(%):</span> <b class="f-14">{{inar.consMonthly.churn.pospago}}</b></td>
-								<td> <span>Month-To-Date Churn</span> <span class="color-high">Prepago AT&T Total(%):</span> <b class="f-14">{{inar.consMonthly.churn.prepagoATTTotal}}</b></td>
-								<td> <span>Month-To-Date Churn</span> <span class="color-high">Other(%):</span> <b class="f-14">{{inar.consMonthly.churn.other}}</b></td>
+								<td> <span>Month-To-Date Churn</span> <span class="color-high">Pospago(%):</span> <b class="f-14">{{inar.consMonthly.churn.pospago | number}}</b></td>
+								<td> <span>Month-To-Date Churn</span> <span class="color-high">Prepago AT&T Total(%):</span> <b class="f-14">{{inar.consMonthly.churn.prepagoATTTotal | number}}</b></td>
+								<td> <span>Month-To-Date Churn</span> <span class="color-high">Other(%):</span> <b class="f-14">{{inar.consMonthly.churn.other | number}}</b></td>
 							</tr>
 							<tr>
-								<td> <span>Month-To-Date Churn</span> <span class="color-high">Prepago Unefon(%):</span> <b class="f-14">{{inar.consMonthly.churn.prepagoUnefon}}</b></td>
-								<td> <span>Month-To-Date Churn</span> <span class="color-high">Prepago(%):</span> <b class="f-14">{{inar.consMonthly.churn.prepago}}</b></td>
-								<td> <span>Month-To-Date Churn</span> <span class="color-high">AT&T Total(%):</span> <b class="f-14">{{inar.consMonthly.churn.ATTTotal}}</b></td>
+								<td> <span>Month-To-Date Churn</span> <span class="color-high">Prepago Unefon(%):</span> <b class="f-14">{{inar.consMonthly.churn.prepagoUnefon | number}}</b></td>
+								<td> <span>Month-To-Date Churn</span> <span class="color-high">Prepago(%):</span> <b class="f-14">{{inar.consMonthly.churn.prepago | number}}</b></td>
+								<td> <span>Month-To-Date Churn</span> <span class="color-high">AT&T Total(%):</span> <b class="f-14">{{inar.consMonthly.churn.ATTTotal | number}}</b></td>
 							</tr>
 						<tbody>
 					</table>
@@ -405,28 +405,28 @@
 				</thead>
 				<tbody>
 					<tr ng-repeat="row in inar.consMonthly.list">
-						<td class="b-blue-right">{{row.servCat}}</td>
-						<td class="b-blue-right"><b class="color-medium">{{row.beginUnits}}</b></td>
-						<td class="gray-light">{{row.newAdds}}</td>
-						<td class="gray-light">{{row.addOns}}</td>
-						<td class="gray-light">{{row.reacts}}</td>
-						<td><b class="color-medium">{{row.grossAdds}}</b></td>
-						<td class="gray-light">{{row.deacts}}</td>
-						<td class="gray-light">{{row.mig}}</td>
-						<td class="b-blue-right"><b class="color-medium">{{row.net}}</td>
-						<td class="b-blue-right"><b class="color-medium">{{row.endUnits}}</b></td>
+						<td class="b-blue-right">{{row.servCat | number}}</td>
+						<td class="b-blue-right"><b class="color-medium">{{row.beginUnits | number}}</b></td>
+						<td class="gray-light">{{row.newAdds | number}}</td>
+						<td class="gray-light">{{row.addOns | number}}</td>
+						<td class="gray-light">{{row.reacts | number}}</td>
+						<td><b class="color-medium">{{row.grossAdds | number}}</b></td>
+						<td class="gray-light">{{row.deacts | number}}</td>
+						<td class="gray-light">{{row.mig | number}}</td>
+						<td class="b-blue-right"><b class="color-medium">{{row.net | number}}</td>
+						<td class="b-blue-right"><b class="color-medium">{{row.endUnits | number}}</b></td>
 					</tr>
 					<tr>
-						<td class="b-blue-right"><b>{{inar.consMonthly.total.servCat}}</b></td>
-						<td class="b-blue-right b-blue-bottom"><b>{{inar.consMonthly.total.beginUnits}}</b></td>
-						<td class="gray-light">{{inar.consMonthly.total.newAdds}}</td>
-						<td class="gray-light">{{inar.consMonthly.total.addOns}}</td>
-						<td class="gray-light">{{inar.consMonthly.total.reacts}}</td>
-						<td><b>{{inar.consMonthly.total.grossAdds}}</b></td>
-						<td class="gray-light">{{inar.consMonthly.total.deacts}}</td>
-						<td class="gray-light">{{inar.consMonthly.total.mig}}</td>
-						<td class="b-blue-right"><b>{{inar.consMonthly.total.net}}</b></td>
-						<td class="b-blue-right b-blue-bottom"><b>{{inar.consMonthly.total.endUnits}}</b></td>
+						<td class="b-blue-right"><b>{{inar.consMonthly.total.servCat | number}}</b></td>
+						<td class="b-blue-right b-blue-bottom"><b>{{inar.consMonthly.total.beginUnits | number}}</b></td>
+						<td class="gray-light">{{inar.consMonthly.total.newAdds | number}}</td>
+						<td class="gray-light">{{inar.consMonthly.total.addOns | number}}</td>
+						<td class="gray-light">{{inar.consMonthly.total.reacts | number}}</td>
+						<td><b>{{inar.consMonthly.total.grossAdds | number}}</b></td>
+						<td class="gray-light">{{inar.consMonthly.total.deacts | number}}</td>
+						<td class="gray-light">{{inar.consMonthly.total.mig | number}}</td>
+						<td class="b-blue-right"><b>{{inar.consMonthly.total.net | number}}</b></td>
+						<td class="b-blue-right b-blue-bottom"><b>{{inar.consMonthly.total.endUnits | number}}</b></td>
 					</tr>
 				</tbody>
 				</table>
@@ -437,10 +437,10 @@
 							<tbody>
 									<tr ng-repeat="row in inar.consMonthly.internalUse">
 										<td>{{row.company}}</td>
-										<td>{{row.employee}}</td>
-										<td>{{row.demo}}</td>
-										<td>{{row.test}}</td>
-										<td>{{row.roaming}}</td>
+										<td>{{vm.isString(row.employee) ? row.employee : (row.employee | number)}}</td>
+										<td>{{vm.isString(row.demo) ? row.demo : (row.demo | number)}}</td>
+										<td>{{vm.isString(row.test) ? row.test : (row.test | number)}}</td>
+										<td>{{vm.isString(row.roaming) ? row.roaming : (row.roaming | number)}}</td>
 									</tr>
 								<tbody>
 						</table>
@@ -451,9 +451,9 @@
 							<tbody>
 									<tr ng-repeat="row in inar.consMonthly.nonComercialBase">
 										<td>{{row.company}}</td>
-										<td>{{row.employee}}</td>
-										<td>{{row.demo}}</td>
-										<td>{{row.test}}</td>
+										<td>{{vm.isString(row.employee) ? row.employee : (row.employee | number)}}</td>
+										<td>{{vm.isString(row.demo) ? row.demo : (row.demo | number)}}</td>
+										<td>{{vm.isString(row.test) ? row.test : (row.test | number)}}</td>
 									</tr>
 								<tbody>
 						</table>
@@ -463,14 +463,14 @@
 				<table class="daily last-churn">
 					<tbody>
 							<tr>
-								<td> <span>Month-To-Date Churn</span> <span class="color-high">Pospago(%):</span> <b class="f-14">{{inar.consMonthly.churn.pospago}}</b></td>
-								<td> <span>Month-To-Date Churn</span> <span class="color-high">Prepago AT&T Total(%):</span> <b class="f-14">{{inar.consMonthly.churn.prepagoATTTotal}}</b></td>
-								<td> <span>Month-To-Date Churn</span> <span class="color-high">Other(%):</span> <b class="f-14">{{inar.consMonthly.churn.other}}</b></td>
+								<td> <span>Month-To-Date Churn</span> <span class="color-high">Pospago(%):</span> <b class="f-14">{{inar.consMonthly.churn.pospago | number}}</b></td>
+								<td> <span>Month-To-Date Churn</span> <span class="color-high">Prepago AT&T Total(%):</span> <b class="f-14">{{inar.consMonthly.churn.prepagoATTTotal | number}}</b></td>
+								<td> <span>Month-To-Date Churn</span> <span class="color-high">Other(%):</span> <b class="f-14">{{inar.consMonthly.churn.other | number}}</b></td>
 							</tr>
 							<tr>
-								<td> <span>Month-To-Date Churn</span> <span class="color-high">Prepago Unefon(%):</span> <b class="f-14">{{inar.consMonthly.churn.prepagoUnefon}}</b></td>
-								<td> <span>Month-To-Date Churn</span> <span class="color-high">Prepago(%):</span> <b class="f-14">{{inar.consMonthly.churn.prepago}}</b></td>
-								<td> <span>Month-To-Date Churn</span> <span class="color-high">AT&T Total(%):</span> <b class="f-14">{{inar.consMonthly.churn.ATTTotal}}</b></td>
+								<td> <span>Month-To-Date Churn</span> <span class="color-high">Prepago Unefon(%):</span> <b class="f-14">{{inar.consMonthly.churn.prepagoUnefon | number}}</b></td>
+								<td> <span>Month-To-Date Churn</span> <span class="color-high">Prepago(%):</span> <b class="f-14">{{inar.consMonthly.churn.prepago | number}}</b></td>
+								<td> <span>Month-To-Date Churn</span> <span class="color-high">AT&T Total(%):</span> <b class="f-14">{{inar.consMonthly.churn.ATTTotal | number}}</b></td>
 							</tr>
 						<tbody>
 					</table>
